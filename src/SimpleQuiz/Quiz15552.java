@@ -1,3 +1,5 @@
+package SimpleQuiz;
+
 import java.io.*;
 
 public class Quiz15552 {

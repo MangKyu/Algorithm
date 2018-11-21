@@ -1,3 +1,5 @@
+package SimpleQuiz;
+
 import java.util.Scanner;
 
 public class Quiz10039 {
