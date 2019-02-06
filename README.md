@@ -1,22 +1,15 @@
 # BaekJoon Algorithm Start  
-  
-  
+
+## Tips for Optimization
+1. 입력을 받기 위해서는 Scanner보다 BufferedReaader를 사용하는 것이 좋다.
+2. 한줄 입력이 여러번 들어오는 경우에는 split보다 StringTokenizer를 사용하여 파싱하는 것이 좋다.
+3. 입력을 만들기 위해서는 StringBuilder를 사용하는 것이 좋다.
+4. Array를 사용하는 것보다 ArrayList를 사용하는 것이 좋다.
+
 ## Have to Refactor  
-
+1. 위의 Tip을 참고하여 Quiz10871을 수정하라.
 
   
-## Have to Review
-To Enhance Performance => Array to ArrayList
-   
-### Quiz 2579, Quiz1463
-* DP 문제 점화식 세우는 방법 Review하기
-
-### Quiz 2252
-* 위상정렬에 대한 개념 및 문제해결법 정리 필요
-* 참고자료: https://gmlwjd9405.github.io/2018/08/27/algorithm-topological-sort.html
-
-
-
 
 ## Review Complete
 
