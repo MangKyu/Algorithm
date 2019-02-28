@@ -27,7 +27,7 @@ public class Quiz1764 {
         }
 
         Collections.sort(list);
-        
+
         System.out.println(list.size());
         for (String s : list) {
             System.out.println(s);
