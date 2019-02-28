@@ -3,23 +3,30 @@
  ## 3월 Plan
 
 * 3/18 (월) ~ 3/24 (일) => 구현/시뮬레이션
-  1. 10451 문제풀이 => https://www.acmicpc.net/problem/10451
-  2. 2606 문제풀이 => https://www.acmicpc.net/problem/2606
-  3. 2667 문제풀이 => https://www.acmicpc.net/problem/2667
-  4. 7569 문제풀이 => https://www.acmicpc.net/problem/2667
+  1. 3101 문제풀이 => https://www.acmicpc.net/problem/3101
+  2. 6581 문제풀이 => https://www.acmicpc.net/problem/6581
+  3. 3190 문제풀이 => https://www.acmicpc.net/problem/3190
+  4. 14503 문제풀이 => https://www.acmicpc.net/problem/14503
+
+  => 남은 구현 문제: 1789, 8979, 5567, 2819
+  => 남은 시뮬레이션 문제: 14499, 9517, 3048, 2980
 
 * 3/11 (월) ~ 3/17 (일) => 부르트포스
-  1. 10451 문제풀이 => https://www.acmicpc.net/problem/10451
-  2. 2606 문제풀이 => https://www.acmicpc.net/problem/2606
-  3. 2667 문제풀이 => https://www.acmicpc.net/problem/2667
-  4. 7569 문제풀이 => https://www.acmicpc.net/problem/2667
+  1. 1051 문제풀이 => https://www.acmicpc.net/problem/1051
+  2. 1527 문제풀이 => https://www.acmicpc.net/problem/1527
+  3. 1062 문제풀이 => https://www.acmicpc.net/problem/1062
+  4. 2966 문제풀이 => https://www.acmicpc.net/problem/2966
+  5. 2981 문제풀이 => https://www.acmicpc.net/problem/2981
+
+  => 남은 부르트포스 문제: 3980, 1052, 148888
 
 * 3/4 (월) ~ 3/10 (일) => 그래프 - DFS, BFS (https://www.acmicpc.net/step/24)
-  1. 10451 문제풀이 => https://www.acmicpc.net/problem/10451
-  2. 2606 문제풀이 => https://www.acmicpc.net/problem/2606
-  3. 2667 문제풀이 => https://www.acmicpc.net/problem/2667
-  4. 7569 문제풀이 => https://www.acmicpc.net/problem/2667
-  5. 
+  1. 1260 문제풀이 => https://www.acmicpc.net/problem/1260
+  2. 10451 문제풀이 => https://www.acmicpc.net/problem/10451
+  3. 2606 문제풀이 => https://www.acmicpc.net/problem/2606
+  4. 2667 문제풀이 => https://www.acmicpc.net/problem/2667
+  5. 7569 문제풀이 => https://www.acmicpc.net/problem/7569
+  
   => 남은 그래프 문제: 7576, 2178, 10216, 1890, 1325
 
  
