@@ -6,126 +6,39 @@ import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
 public class Quiz1024 {
-    //FIXME 왜 정답이 아닌지 모르겠음 ㅠㅠ
-    static int L;
 
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st = new StringTokenizer(br.readLine());
         int N = Integer.parseInt(st.nextToken());
-        L = Integer.parseInt(st.nextToken());
+        int L = Integer.parseInt(st.nextToken());
 
-        while (true){
-            if(L>100){
-                System.out.print(-1);
-                break;
+        for(int i = L ; i <= 100 ; i++){
+            // https://danco.tistory.com/30 를 통해 시작 함수를 찾는다
+            int startNum = (N - getSequenceSum(1, i-1)) / i;
+
+            // 시작번호가 0보다 크거나 같으며, 합이 같을 경우 출력 및 종료
+            if(startNum >= 0 && N == getSequenceSum(startNum, i)){
+                printSequence(startNum, i);
+                return;
             }
+        }
 
-            if(N%L==0 && L%2==1){
-                int start = N/L - L/2;
-                if(printArray(start)){
-                    break;
-                }else {
-                    L++;
-                }
-            }else if (N%L != 0 && L%2!=1 && (N*10/L)%10 == 5){
-                int start = Math.round((float)N/L - (float)L/2);
-                if(printArray(start)){
-                    break;
-                }else {
-                    L++;
-                }
+        System.out.println(-1);
 
-            }else{
-                L++;
-            }
+    }
+
+    // n부터 시작하여 length 개를 출력한다.
+    private static void printSequence(int n, int length){
+        for(int i = 0 ; i < length ; i++){
+            System.out.print(i + n + " ");
         }
 
     }
 
-    private static Boolean printArray(int start){
-        if(start > 0){
-            for(int i = 0 ; i < L ; i++){
-                System.out.print(start+i + " ");
-            }
-            return true;
-        }else{
-            return false;
-        }
+    // n부터 시작하여 length 개의 합을 구한다.
+    private static int getSequenceSum(int n, int length){
+        return (2*n + length-1) * (length) / 2;
     }
 
 }
-
-/*
-public class Quiz1024 {
-
-    //Todo https://www.acmicpc.net/problem/1021
-    //Todo https://www.acmicpc.net/problem/1107
-    //Todo https://www.acmicpc.net/problem/3163
-    static int N;
-    static int L;
-    static int tempL;
-    static ArrayList<Integer> arrayList;
-
-    public static void main(String[] args) throws IOException {
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        StringTokenizer st = new StringTokenizer(br.readLine());
-        N = Integer.parseInt(st.nextToken());
-        L = Integer.parseInt(st.nextToken());
-        arrayList = new ArrayList<>();
-
-        while(true){
-            if(L > 100){
-                System.out.println(-1);
-                break;
-            }
-
-
-            if(L%2==0 && N%L!=0){
-                addArray();
-                if(isFinish()){
-                    break;
-                }else{
-                    L++;
-                    arrayList.clear();
-                }
-            }else if(L%2!=0 && N%L==0){
-                addArray();
-                if(isFinish()){
-                    break;
-                }else{
-                    L++;
-                    arrayList.clear();
-                }
-            }else{
-                L++;
-            }
-        }
-
-        // https://www.acmicpc.net/problem/1024
-    }
-
-    private static boolean isFinish() {
-        if(arrayList.size()<L){
-            for (Integer integer : arrayList) {
-                System.out.print(integer + " ");
-            }
-            return true;
-        }
-        return false;
-    }
-
-    private static void addArray(){
-        int start = Math.round(N/L - L/2);
-        for(int i = 0 ; i < L ; i++){
-
-            if(start <0 && Math.abs(start) < start+i){
-                arrayList.add(start+i);
-                //System.out.print(start+i + " ");
-            }else if(start > 0){
-                arrayList.add(start+i);
-            }
-        }
-    }
-}
-*/
