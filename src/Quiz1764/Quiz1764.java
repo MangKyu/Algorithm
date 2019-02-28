@@ -11,8 +11,6 @@ public class Quiz1764 {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st = new StringTokenizer(br.readLine());
         Set<String> set = new HashSet<>();
-        int cnt = 0 ;
-        StringBuilder sb = new StringBuilder();
         ArrayList<String> list = new ArrayList<>();
 
         int x = Integer.parseInt(st.nextToken());
@@ -29,7 +27,7 @@ public class Quiz1764 {
         }
 
         Collections.sort(list);
-
+        
         System.out.println(list.size());
         for (String s : list) {
             System.out.println(s);
