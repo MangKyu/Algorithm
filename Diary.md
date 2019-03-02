@@ -1,14 +1,21 @@
 # 2019 Algorithm Diary
 
+DP: 1890
+
  ## 3월 Plan
 
-* 3/18 (월) ~ 3/24 (일) => 구현/시뮬레이션
-  1. 3101 문제풀이 => https://www.acmicpc.net/problem/3101
-  2. 6581 문제풀이 => https://www.acmicpc.net/problem/6581
-  3. 3190 문제풀이 => https://www.acmicpc.net/problem/3190
-  4. 14503 문제풀이 => https://www.acmicpc.net/problem/14503
+* 3/25(월) ~ 3/31(일) => Review Day
+  1. Review Note에 적힌 문제들을 복습하라!
 
-  => 남은 구현 문제: 1789, 8979, 5567, 2819
+
+* 3/18 (월) ~ 3/24 (일) => 구현/시뮬레이션
+  1. 1789 문제풀이 => https://www.acmicpc.net/problem/1789
+  2. 3101 문제풀이 => https://www.acmicpc.net/problem/3101
+  3. 6581 문제풀이 => https://www.acmicpc.net/problem/6581
+  4. 3190 문제풀이 => https://www.acmicpc.net/problem/3190
+  5. 14503 문제풀이 => https://www.acmicpc.net/problem/14503
+
+  => 남은 구현 문제: 8979, 5567, 2819
   => 남은 시뮬레이션 문제: 14499, 9517, 3048, 2980
 
 * 3/11 (월) ~ 3/17 (일) => 부르트포스
@@ -26,8 +33,8 @@
   3. 2606 문제풀이 => https://www.acmicpc.net/problem/2606
   4. 2667 문제풀이 => https://www.acmicpc.net/problem/2667
   5. 7569 문제풀이 => https://www.acmicpc.net/problem/7569
-  
-  => 남은 그래프 문제: 7576, 2178, 10216, 1890, 1325
+  6. 2178 문제풀이 => https://www.acmicpc.net/problem/2178
+  => 남은 그래프 문제: 10216, 1325
 
  
  ## 2월 Plan

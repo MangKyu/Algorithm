@@ -33,16 +33,15 @@ Professional:다익스트라, 벨만포트, 플로이드와샬, 세그먼트 트
 2. 한줄 입력이 여러번 들어오는 경우에는 split보다 StringTokenizer를 사용하여 파싱하는 것이 좋다.
 3. 입력을 만들기 위해서는 StringBuilder를 사용하는 것이 좋다.
 4. Array를 사용하는 것보다 ArrayList를 사용하는 것이 좋다.
+5. ArrayList를 정렬하기 위해서는 Collections.sort()를 사용한다. 
+6. 수학적 요소가 들어가는 문제는 수식을 만들어 해결한다. ex) Quiz1024
+7. 배열을 초기화하기 위해서는 java.util.Arrays의 Arrays.fill(배열, 초기화값)을 사용한다.
 
-## Have to Refactor  
-1. 위의 Tip을 참고하여 Quiz10871을 수정하라.
-
-  
-
-## Review Complete
-
-### Quiz 1697
-* boolean [][] visited과 Node 클래스를 따로 사용하지 않고, int[][] visited로 사용하여 0일 경우에는 방문 x, 1 이상일 경우에는 Depth를 저장한다고 선언한다.
-=> http://ggmouse.tistory.com/361
-* 그 외에 코드를 간략화 할 수 있음
-=> https://zoonvivor.tistory.com/90
+=> 10871번 기준으로 1번코드와 2번코드의 성능은 아래와 같다.
+* 1번 코드  
+    * 코드 주소: https://github.com/MangKyu/BaekJoon/blob/master/src/Quiz10871/Quiz10871.java
+    * 메모리: 17708KB and Time: 208ms
+    
+* 2번 코드  
+    * 코드 주소: https://github.com/MangKyu/BaekJoon/blob/master/src/Quiz10871/Quiz10871.java
+    * 메모리: 15616KB and Time: 128ms
