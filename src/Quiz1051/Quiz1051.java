@@ -8,8 +8,7 @@ import java.util.StringTokenizer;
 public class Quiz1051 {
     // 각 꼭지점의 값들을 저장하는 변수
     private static int[][] square;
-    private static int N;
-    private static int M;
+    private static int N, M;
 
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -18,18 +17,33 @@ public class Quiz1051 {
         M = Integer.parseInt(st.nextToken());
         square = new int [N][M];
 
+        // 공백없이 연속된 숫자를 입력받기 위해서는 아래와 같이 사용해준다.
+        for(int i = 0 ; i < N ; i++){
+            for(int j = 0 ; j < M ; j++){
+                square[i][j] = br.read()-'0';
+            }
+            br.readLine();
+        }
+
+        /* NOT GOOD for sequence number input
         for(int i = 0 ; i < N ; i++){
             String[] inputs = br.readLine().split("");
             for(int j = 0 ; j < M ; j++){
                 square[i][j] = Integer.parseInt(inputs[j]);
             }
+            br.readLine();
         }
+        */
+
         System.out.println(getMaxArea());
 
     }
 
     private static int getMaxArea() {
         // 가로와 세로의 길이 중 최솟값을 구한다. 3 x 5인 직사각형에서 5를 검사하면 IndexOutOfBounds가 발생하므로
+        //int N = square.length;
+        //int M = square[0].length;
+
         int length = Math.min(N, M);
 
         // 현재의 length부터 검사해보고 꼭지점이 동일한 정사각형이 존재하면 검사하는 길이를 줄이기 위해 do while을 사용하였다.
