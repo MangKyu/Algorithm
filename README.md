@@ -36,12 +36,17 @@ Professional:다익스트라, 벨만포트, 플로이드와샬, 세그먼트 트
 5. ArrayList를 정렬하기 위해서는 Collections.sort()를 사용한다. 
 6. 수학적 요소가 들어가는 문제는 수식을 만들어 해결한다. ex) Quiz1024
 7. 배열을 초기화하기 위해서는 java.util.Arrays의 Arrays.fill(배열, 초기화값)을 사용한다.
+8. 연속으로 있는 숫자를 입력받기 위해서는 1번 대신에 2번을 사용하자
+    1. String[] inputs = br.readLine().split(""); 대신에 
+    2. br.read() - '0' 그리고 다음 열에 받아야하는 연속된 숫자가 또 있다면 br.readline()으로 개행을 씹어주고, 반복한다.
 
-=> 10871번 기준으로 1번코드와 2번코드의 성능은 아래와 같다.
+
+=> 10871번 기준으로 1번코드와 2번코드의 성능은 아래와 같다. 이 코드는 StringBuilder의 이점과, Split의 단점을 보여준다.
 * 1번 코드  
     * 코드 주소: https://github.com/MangKyu/BaekJoon/blob/master/src/Quiz10871/Quiz10871.java
     * 메모리: 17708KB and Time: 208ms
     
 * 2번 코드  
-    * 코드 주소: https://github.com/MangKyu/BaekJoon/blob/master/src/Quiz10871/Quiz10871.java
-    * 메모리: 15616KB and Time: 128ms
+    * 코드 주소: https://github.com/MangKyu/BaekJoon/blob/master/src/Quiz10871/Quiz10871_2.java
+    * 메모리: 15616KB and Time: 128ms    
+    
