@@ -1,12 +1,14 @@
-package SimpleQuiz;
+package Quiz1065;
 
-import java.util.Scanner;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 
 public class Quiz1065 {
 
-    public static void main(String args[]) {
-        Scanner s = new Scanner(System.in);
-        int num = s.nextInt();
+    public static void main(String args[]) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        int num = Integer.parseInt(br.readLine());
         int count = 0;
 
         if(num < 100){
@@ -26,12 +28,14 @@ public class Quiz1065 {
     }
 
     private static int checkHanNumber(int num) {
-        int a = num % 10;
-        int b = num % 100 / 10;
-        int c = num / 100;
-        if(b * 2 == a + c){
+        int num1 = num / 100 % 10;
+        int num2 = num / 10 % 10;
+        int num3 = num % 10;
+
+        if (num2 * 2 == num1 + num3) {
             return 1;
         }
         return 0;
     }
+
 }
