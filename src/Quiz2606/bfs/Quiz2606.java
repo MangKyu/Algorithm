@@ -1,4 +1,4 @@
-package Quiz2606;
+package Quiz2606.bfs;
 
 import java.io.BufferedReader;
 import java.io.IOException;
