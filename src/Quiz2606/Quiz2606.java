@@ -1,8 +1,10 @@
-package Quiz2606.dfs;
+package Quiz2606;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.LinkedList;
+import java.util.Queue;
 import java.util.StringTokenizer;
 
 public class Quiz2606 {
@@ -35,6 +37,7 @@ public class Quiz2606 {
 
         // 1부터 시작하여 감염가능한 노드들을 찾는다.
         dfs(1);
+        //bfs(1);
 
         System.out.println(cnt);
 
@@ -51,6 +54,26 @@ public class Quiz2606 {
             if(graph[searchIndex][i] == IS_CONNECTED && !isVisited[i]){
                 cnt++;
                 dfs(i);
+            }
+        }
+    }
+
+    // 1부터 시작하여 연결된 그래프의 개수를 출력한다. 너비우선탐색을 위해 큐를 사용한다.
+    private static void bfs(int startIndex) {
+        Queue<Integer> queue = new LinkedList<>();
+        queue.offer(startIndex);
+
+        while (!queue.isEmpty()) {
+            int num = queue.poll();
+            isVisited[num] = true;
+
+            // num과 인접하며, 방문하지 않은 노드들에 대해서는 방문하고, 감염되었다는 cnt를 1 증가시킨다.
+            for (int i = 1; i < graph.length; i++) {
+                if (graph[num][i] == 1 && !isVisited[i]) {
+                    isVisited[i] = true;
+                    queue.offer(i);
+                    cnt++;
+                }
             }
         }
     }
