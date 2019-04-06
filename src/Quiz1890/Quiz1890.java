@@ -15,11 +15,12 @@ public class Quiz1890 {
     private static int[] dx = {1, 0};
     private static int[] dy = {0, 1};
     private static int N;
+    private static int[][] graph;
 
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         N = Integer.parseInt(br.readLine());
-        int[][] graph = new int[N][N];
+        graph = new int[N][N];
 
         for (int i = 0; i < N; i++) {
             StringTokenizer st = new StringTokenizer(br.readLine());
@@ -28,10 +29,10 @@ public class Quiz1890 {
                 graph[i][j] = Integer.parseInt(st.nextToken());
             }
         }
-        System.out.println(bfs(graph));
+        System.out.println(bfs());
     }
 
-    private static long bfs(int[][] graph) {
+    private static long bfs() {
         long cnt = 0;
         Queue<Point> queue = new LinkedList<>();
 
