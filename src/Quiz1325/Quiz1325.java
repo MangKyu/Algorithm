@@ -3,10 +3,7 @@ package Quiz1325;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.Queue;
-import java.util.StringTokenizer;
+import java.util.*;
 
 public class Quiz1325 {
     private static int N;
@@ -29,7 +26,7 @@ public class Quiz1325 {
         graph = new ArrayList[N+1];
         cntArr = new int[N+1];
 
-        for(int i = 0 ; i <= N ; i++){
+        for(int i = 1 ; i <= N ; i++){
             graph[i] = new ArrayList<>();
         }
 
@@ -62,7 +59,7 @@ public class Quiz1325 {
 
     // 방문 여부를 초기화하고, 탐색 횟수를 0으로 초기화한다.
     private static void initData() {
-        isVisited = new boolean[N + 1];
+        Arrays.fill(isVisited, false);
     }
 
     // dfs를 통해 탐색한다.
