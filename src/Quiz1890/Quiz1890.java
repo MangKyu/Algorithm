@@ -1,69 +1,81 @@
 package Quiz1890;
 
-import java.awt.*;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.LinkedList;
-import java.util.Queue;
+import java.util.Arrays;
 import java.util.StringTokenizer;
 
 public class Quiz1890 {
-    //FIXME BFS로 풀면 메모리 초과가 난다. 이런 이유로 기존에는 그래프 문제였는데, 현재는 DP문제로 변경됨!
-
-    // 우 또는 히로 가는 dx, dy를 미리 만들어둔다.
+    // 우 또는 하로 가는 dx, dy를 미리 만들어둔다.
     private static int[] dx = {1, 0};
     private static int[] dy = {0, 1};
+
+    // 배열의 크기를 나타내는 N
     private static int N;
+
+    // 그래프를 담고있는 변수
     private static int[][] graph;
+    // 방문에 대한 dp값을 저장하는 배열
+    private static long[][] dp;
+
+    // 아직 방문하지 않았음을 나타내는 상수
+    private static final int NOT_VISITED = -1;
 
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        N = Integer.parseInt(br.readLine());
-        graph = new int[N][N];
+        StringTokenizer st;
 
-        for (int i = 0; i < N; i++) {
-            StringTokenizer st = new StringTokenizer(br.readLine());
-            for (int j = 0; j < N; j++) {
+        N = Integer.parseInt(br.readLine());
+
+        graph = new int[N + 1][N + 1];
+        dp = new long[N + 1][N + 1];
+
+        // 미방문 상태로 모든 배열의 값을 초기화한다.
+        for (int i = 1; i <= N; i++) {
+            Arrays.fill(dp[i], NOT_VISITED);
+        }
+
+        for (int i = 1; i <= N; i++) {
+            st = new StringTokenizer(br.readLine());
+            for (int j = 1; j <= N; j++) {
                 // 배열을 초기화해준다.
                 graph[i][j] = Integer.parseInt(st.nextToken());
             }
         }
-        System.out.println(bfs());
+
+        System.out.println(dfs(1, 1));
     }
 
-    private static long bfs() {
-        long cnt = 0;
-        Queue<Point> queue = new LinkedList<>();
+    private static long dfs(int y, int x) {
+        // 만약 꼭지점이 아니라면 다른 노드로 방문을 탐색한다.
+        if (y != N || x != N) {
+            // 이미 방문을 한 상태라면 이전에 방문했을대의 결과를 반환한다.
+            if (dp[y][x] != NOT_VISITED) {
+                return dp[y][x];
+            }
 
-        //0, 0부터 탐색을 시작한다.
-        queue.offer(new Point(0, 0));
+            // 방문을 한 상태로 변경해준다.
+            dp[y][x] = 0;
 
-        while (!queue.isEmpty()) {
-            Point point = queue.poll();
-            // num은 해당 x, y가 점프할 칸의 수이다.
-            int num = graph[point.x][point.y];
-
-            //만약 도착했다면 cnt를 높여준다.
-            if (point.x == N - 1 && point.y == N - 1) {
-                cnt++;
-            } else {
-                //num이 0인 경우에는 이동할 수 없으므로 num != 0인 경우만 점프한다.
-                if (num != 0) {
-                    // dx, dy를 사용하여 이동하는데, * num을 하여 그만큼 이동하게 한다. i==0일때는 우로 num, i==1일때는 하로 num
-                    for (int i = 0; i < 2; i++) {
-                        //System.out.println("X: " + point.x + num * dx[i] + "    Y: " + point.y + num * dy[i]);
-
-                        if (point.x + num * dx[i] < N && point.y + num * dy[i] < N) {
-                            queue.offer(new Point(point.x + num * dx[i], point.y + num * dy[i]));
-                        }
-                    }
-
+            for (int i = 0; i < 2; i++) {
+                int num = graph[y][x];
+                // 이동할 좌표가 범위 내에 있다면 dfs를 통해 탐색한다.
+                if (withinBoundaries(y + num * dy[i], x + num * dx[i]) && num != 0) {
+                    dp[y][x] += dfs(y + num * dy[i], x + num * dx[i]);
                 }
             }
-        }
 
-        return cnt;
+            //계산을 통해 얻은 방문값을 반환한다.
+            return dp[y][x];
+        } else {
+            // 목적지에 도착하면 1을 반환한다.
+            return 1;
+        }
     }
 
+    // 목적 y, x가 경계내에 존재하는지 검사하는 함수
+    private static boolean withinBoundaries(int y, int x) {
+        return y >= 1 && y <= N && x >= 1 && x <= N;
+    }
 }
