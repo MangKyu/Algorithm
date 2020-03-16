@@ -55,11 +55,19 @@ public class Quiz8979 {
 }
 
 class Nation {
+    int num;
     int gold;
     int silver;
     int bronze;
 
     Nation(int gold, int silver, int bronze) {
+        this.gold = gold;
+        this.silver = silver;
+        this.bronze = bronze;
+    }
+
+    Nation(int num, int gold, int silver, int bronze) {
+        this.num = num;
         this.gold = gold;
         this.silver = silver;
         this.bronze = bronze;
