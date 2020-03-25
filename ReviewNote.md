@@ -59,11 +59,11 @@
 ㅇ
 => 10871번 기준으로 1번코드와 2번코드의 성능은 아래와 같다. 이 코드는 StringBuilder의 이점과, Split의 단점을 보여준다.
 * 1번 코드  
-    * 코드 주소: https://github.com/MangKyu/BaekJoon/blob/master/src/Quiz10871/Quiz10871.java
+    * 코드 주소: https://github.com/MangKyu/BaekJoon/blob/master/src/Baekjoon.Quiz10871/Baekjoon.Quiz10871.java
     * 메모리: 17708KB and Time: 208ms
     
 * 2번 코드  
-    * 코드 주소: https://github.com/MangKyu/BaekJoon/blob/master/src/Quiz10871/Quiz10871_2.java
+    * 코드 주소: https://github.com/MangKyu/BaekJoon/blob/master/src/Baekjoon.Quiz10871/Quiz10871_2.java
     * 메모리: 15616KB and Time: 128ms    
     
 
@@ -71,7 +71,7 @@
 
 ## Tips While Reviewing
 1. ArrayList를 정렬하기 위해서는 Collections.sort()를 사용한다. 
-2. 수학적 요소가 들어가는 문제는 수식을 만들어 해결한다. ex) Quiz1024
+2. 수학적 요소가 들어가는 문제는 수식을 만들어 해결한다. ex) Baekjoon.Quiz1024
 3. 배열을 초기화하기 위해서는 java.util.Arrays의 Arrays.fill(배열, 초기화값)을 사용한다.
 4. ArrayList의 배열은 ArrayList<Integer[]> graph = new ArrayList<>(); 로 사용한다. => 16235 참고
 
