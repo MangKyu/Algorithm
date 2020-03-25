@@ -1,6 +1,8 @@
 # 2019 Algorithm Review
 
 ## Review Quiz
+* 15686번 치킨 문제
+    * 준호님 코드 참고
 
 
 * 1107번 리모컨 문제
@@ -54,7 +56,7 @@
     1. String[] inputs = br.readLine().split(""); 대신에 
     2. br.read() - '0' 그리고 다음 열에 받아야하는 연속된 숫자가 또 있다면 br.readline()으로 개행을 씹어주고, 반복한다.
 
-
+ㅇ
 => 10871번 기준으로 1번코드와 2번코드의 성능은 아래와 같다. 이 코드는 StringBuilder의 이점과, Split의 단점을 보여준다.
 * 1번 코드  
     * 코드 주소: https://github.com/MangKyu/BaekJoon/blob/master/src/Quiz10871/Quiz10871.java
@@ -71,4 +73,9 @@
 1. ArrayList를 정렬하기 위해서는 Collections.sort()를 사용한다. 
 2. 수학적 요소가 들어가는 문제는 수식을 만들어 해결한다. ex) Quiz1024
 3. 배열을 초기화하기 위해서는 java.util.Arrays의 Arrays.fill(배열, 초기화값)을 사용한다.
-4. ArrayList의 배열은 ArrayList<Integer[]> graph = new ArrayList<>(); 로 사용한다.
+4. ArrayList의 배열은 ArrayList<Integer[]> graph = new ArrayList<>(); 로 사용한다. => 16235 참고
+
+## BackTracking 알고리즘
+* 모든 조합에서 일부를 배제하여 풀이시간을 단축한다.
+* 어떤 노드를 점검하여 유망하지 않으면 그 노드의 부모노드로 되돌아간 후 다른 자손노드를 검색한다.
+* 
