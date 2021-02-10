@@ -1,27 +1,64 @@
 # 미해결 과제
-  => 백트래킹 문제: 2580
   => 남은 구현 문제: 2819
-  => 남은 시뮬레이션 문제: 14499, 9517
+  => 남은 시뮬레이션 문제: 9517
   => 남은 DFS 문제: 10216
   => 남은 BFS 문제: 10216
-  => 남은 부르트포스 문제: 1062, 2981, 14502
-  => 남은 DP 문제: 2293
-  => 남은 문제: 15683, 13460
-  
-DFS 해결: 11403, 16236 => 다른사람 코드 확인 + 16236 pointList를 반환해서 굳이 min을 찾는 작업을 안하고 한번에 처리가능할듯?
-BFS 해결: 7576, 14502 => 다른사람 코드 확인
-DP 해결: 1932 => 다른사람 코드 확인
-
-https://www.acmicpc.net/problem/9663
+  => 남은 부르트포스 문제: 2981
+  => 남은 백트래킹 문제: 9663 https://www.acmicpc.net/problem/9663
 
 
 # 2020 Algorithm Diary
 
+## 9월 Plan
+* 9월 1주 - 부르트포스
+1. https://www.acmicpc.net/problem/16988
+2. https://www.acmicpc.net/problem/16943
+
+
+* 푼 문제 - BFS/DFS
+1. https://www.acmicpc.net/problem/2468
+2. https://www.acmicpc.net/problem/14502
+3. https://www.acmicpc.net/problem/5014
+4. https://www.acmicpc.net/problem/2573
+5. https://www.acmicpc.net/problem/9205
+6. https://www.acmicpc.net/problem/2644
+
+* 푼 문제 - dp
+1. https://www.acmicpc.net/problem/2293
+
+
+## 4월 Plan
+* 4월 4주 => 삼성기술
+  1. https://www.acmicpc.net/problem/14890
+  2. https://www.acmicpc.net/problem/17837
+  3. https://www.acmicpc.net/problem/
+  
+* 4월 3주 => 삼성기출
+  1. https://www.acmicpc.net/problem/15683
+  2. https://www.acmicpc.net/problem/14890
+  3. https://www.acmicpc.net/problem/17799
+  4. https://www.acmicpc.net/problem/17144
+  5. https://www.acmicpc.net/problem/15685
+
+* 4월 2주 => 삼성기출
+  1. https://www.acmicpc.net/problem/15683
+  2. https://www.acmicpc.net/problem/14890
+  3. https://www.acmicpc.net/problem/17799
+  4. https://www.acmicpc.net/problem/17144
+  5. https://www.acmicpc.net/problem/15685
+  
+* 4월 1주 => 삼성기출
+  1. https://www.acmicpc.net/problem/13460
+  2. https://www.acmicpc.net/problem/14499
+  3. https://www.acmicpc.net/problem/14500
+  4. https://www.acmicpc.net/problem/14891
+
 ## 3월 Plan
 
-* 3월 4주 => 삼성기출 시작
+* 3월 4주 => 삼성기출
   1. https://www.acmicpc.net/problem/13458
-  4. https://www.acmicpc.net/problem/14501
+  2. https://www.acmicpc.net/problem/14501
+  3. https://www.acmicpc.net/problem/14889
 
 * 3월 3주 => DFS & 백트래킹 & DP
   1. https://www.acmicpc.net/problem/15649
@@ -32,8 +69,8 @@ https://www.acmicpc.net/problem/9663
 
 * 3월 2주 구현/시뮬레이션
   1. https://www.acmicpc.net/problem/11866
-  4. https://www.acmicpc.net/problem/1063
-  4. https://www.acmicpc.net/problem/8979
+  2. https://www.acmicpc.net/problem/1063
+  3. https://www.acmicpc.net/problem/8979
 
 # 2019 Algorithm Diary
 
@@ -90,11 +127,12 @@ https://www.acmicpc.net/problem/9663
     2. 1932 문제풀이 => https://www.acmicpc.net/problem/1932
     3. 1890 문제풀이 => https://www.acmicpc.net/problem/1890
 
-* 4/1(월) ~ 4/7(일) => DFS
+* 4/1(월) ~ 4/7(일) => DFS & BFS 1문제
     1. 11403 문제풀이 => https://www.acmicpc.net/problem/11403
     2. 2606 문제풀이 => https://www.acmicpc.net/problem/2606
     3. 1325 문제풀이 => https://www.acmicpc.net/problem/1325
-
+    4. 14502 문제풀이 => https://www.acmicpc.net/problem/14502 (BFS)
+    
 ## 3월 Plan
 * 3/25(월) ~ 3/31(일) => 기타
     1. 7576 문제풀이 => https://www.acmicpc.net/problem/7576 (BFS)
